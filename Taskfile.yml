@@ -1,0 +1,19 @@
+version: '3'
+
+tasks:
+  dev-setup:
+    desc: Setup the development environment
+    summary: |
+      Prepare your local development environment.
+
+      It will:
+      - Install git pre-commit hooks;
+    cmds:
+      - task: pre-commit:install-hooks
+
+  pre-commit:install-hooks:
+    cmds:
+      - pre-commit install
+    preconditions:
+      - sh: command -v pre-commit >/dev/null 2>&1
+        msg: "Command pre-commit not found. Halting"
