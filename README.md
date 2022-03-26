@@ -1,4 +1,4 @@
-# data-invest
+# Investment Data Platform
 Personal investment data platform
 
 ## Requirements
